@@ -1,8 +1,8 @@
 %% pinhole imaging function
 function I = pinhole(O,di,x,y,z,Lx,dp,Nx)
 
-if size(O,3) == 3
-    O = rgb2gray(O);
+if size(O,3) == 3  %输出数组O第三维度的长度
+    O = rgb2gray(O);  %I = rgb2gray(RGB) 将真彩色图像 RGB 转换为灰度图像 I
 end
 [m,n] = size(O);
 % Lx = 400;         % object width, unit:mm
