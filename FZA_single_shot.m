@@ -1,9 +1,9 @@
 clearvars; clc; close all
 % FZA_lensless_imaging
-addpath('./functions');
+addpath('./functions');  %向搜索路径中添加文件夹
 
 %% Pingole imaging
-% img = im2double(imread('THU.png'));
+% img = im2double(imread('THU.png'));  %将图像转换为双精度，A = imread(filename) 从 filename 指定的文件读取图像，并从文件内容推断出其格式。如果 filename 为多图像文件，则 imread 读取该文件中的第一个图像。
 img = im2double(imread('cameraman.tif'));
 
 di = 3;         % the distance from mask to sensor
