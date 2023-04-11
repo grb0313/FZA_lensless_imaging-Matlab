@@ -6,16 +6,16 @@ addpath('./functions');  %向搜索路径中添加文件夹
 % img = im2double(imread('THU.png'));  %将图像转换为双精度，A = imread(filename) 从 filename 指定的文件读取图像，并从文件内容推断出其格式。如果 filename 为多图像文件，则 imread 读取该文件中的第一个图像。
 img = im2double(imread('cameraman.tif'));
 
-di = 3;         % the distance from mask to sensor
+di = 3;         % the distance from mask to sensor，掩膜与传感器的间距
 z1 = 20;    x1 = 0;    y1 = 0;
 
-Lx1 = 20;       % object size
+Lx1 = 20;       % object size，对象大小
 
-dp = 0.01;      % pixel pitch
-Nx = 512;       % pixel numbers
+dp = 0.01;      % pixel pitch，像素间距
+Nx = 512;       % pixel numbers，像素数量
 Ny = 512;
 
-% generate the original imaging to be reconstructed
+% generate the original imaging to be reconstructed，生成待重建的原始图像
 Im = pinhole(img,di,x1,y1,z1,Lx1,dp,Nx);
 figure,imagesc(Im);title('Original image')
 colormap gray;
